@@ -1,7 +1,39 @@
-.activities-grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Columnas responsivas */
-  gap: 20px; /* Espacio entre las tarjetas */
-  padding: 20px;
-  justify-content: center; /* Centra el grid si hay espacio */
+/* App Layout Styles */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 80px; /* Account for fixed header */
+}
+
+/* Global Layout Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page-container {
+  min-height: calc(100vh - 80px);
+  padding: 2rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .main-content {
+    padding-top: 70px; /* Smaller header on mobile */
+  }
+  
+  .page-container {
+    padding: 1rem 0;
+    min-height: calc(100vh - 70px);
+  }
 }

@@ -1,0 +1,515 @@
+/* Gimnasio Page Styles - Aplicando principios de UX/UI para Tomás */
+
+.gimnasio-page {
+  min-height: calc(100vh - 64px);
+  background-color: #f8fafc;
+  padding: 2rem 0;
+  padding-bottom: 120px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Page Header */
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 1rem 0;
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Selector Sections - Jerarquía visual clara */
+.date-selector,
+.space-selector,
+.schedule-section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+}
+
+.selector-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 1.5rem 0;
+}
+
+.title-icon {
+  width: 24px;
+  height: 24px;
+  color: #1976d2;
+}
+
+/* Date Grid - Modelo conceptual de calendario */
+.date-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.date-button {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  position: relative;
+}
+
+.date-button:hover {
+  border-color: #1976d2;
+  background: #f8faff;
+}
+
+.date-button.selected {
+  border-color: #1976d2;
+  background: #1976d2;
+  color: white;
+}
+
+.date-button.today {
+  border-color: #10b981;
+}
+
+.date-button.today.selected {
+  border-color: #1976d2;
+  background: #1976d2;
+}
+
+.date-display {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.today-label {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #10b981;
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* Space Grid */
+.space-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.space-button {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.space-button:hover {
+  border-color: #1976d2;
+  background: #f8faff;
+}
+
+.space-button.selected {
+  border-color: #1976d2;
+  background: #f8faff;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.15);
+}
+
+.space-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.space-capacity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.capacity-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Schedule Grid - Mapeo natural del calendario */
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+/* Schedule Slots - Affordances claras */
+.schedule-slot {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.schedule-slot:hover:not(.unavailable) {
+  border-color: #1976d2;
+  background: #f8faff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-slot.selected {
+  border-color: #1976d2;
+  background: #f8faff;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.2);
+}
+
+.schedule-slot.unavailable {
+  background: #f8f9fa;
+  border-color: #dee2e6;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.slot-time {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.slot-availability {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.slot-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Indicador de ocupación - Feedback visual */
+.occupancy-indicator {
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.occupancy-bar {
+  height: 100%;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.slot-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.status-icon.available {
+  color: #10b981;
+}
+
+.status-icon.unavailable {
+  color: #ef4444;
+}
+
+.available-text {
+  color: #10b981;
+}
+
+.unavailable-text {
+  color: #ef4444;
+}
+
+/* Reservation Section */
+.reservation-section {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
+}
+
+.reservation-section.hidden {
+  transform: translateY(100%);
+}
+
+.reserve-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.25rem 2rem;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 300px;
+  justify-content: center;
+}
+
+.reserve-button:hover:not(.disabled) {
+  background: #1565c0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+.reserve-button.disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.button-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Modal Styles - Control y libertad del usuario */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.confirmation-modal {
+  background: white;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #64748b;
+  transition: color 0.2s ease;
+}
+
+.close-button:hover {
+  color: #1e293b;
+}
+
+.close-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.modal-content {
+  padding: 2rem;
+}
+
+/* Reservation Summary */
+.reservation-summary {
+  margin-bottom: 2rem;
+}
+
+.summary-item {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.summary-icon {
+  width: 20px;
+  height: 20px;
+  color: #1976d2;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.summary-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.summary-item strong {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.summary-item span {
+  color: #64748b;
+}
+
+/* Modal Actions */
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.cancel-button,
+.confirm-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cancel-button {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.cancel-button:hover {
+  background: #e5e7eb;
+}
+
+.confirm-button {
+  background: #1976d2;
+  color: white;
+  border: 1px solid #1976d2;
+}
+
+.confirm-button:hover {
+  background: #1565c0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .date-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .space-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .schedule-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .date-selector,
+  .space-selector,
+  .schedule-section {
+    padding: 1.5rem;
+  }
+  
+  .reserve-button {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .modal-actions {
+    flex-direction: column;
+  }
+  
+  .cancel-button,
+  .confirm-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .date-grid {
+    grid-template-columns: 1fr;
+  }
+}
