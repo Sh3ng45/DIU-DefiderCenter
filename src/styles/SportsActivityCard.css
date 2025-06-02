@@ -45,7 +45,7 @@
 }
 
 .sports-activity-card:hover .activity-teaser {
-  transform: translateY(100%); /* Desaparece el teaser al hacer hover */
+  transform: translateY(100%); 
 }
 
 .activity-info-overlay {
