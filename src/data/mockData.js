@@ -10,7 +10,6 @@ export const mockTalleres = [
     ocupados: 18,
     instructor: "Carlos Mendoza",
     descripcion: "Taller enfocado en fundamentos básicos del fútbol",
-    precio: "Gratuito",
     nivel: "Principiante"
   },
   {
@@ -23,7 +22,6 @@ export const mockTalleres = [
     ocupados: 15,
     instructor: "Ana Silva",
     descripcion: "Desarrollo de técnicas intermedias y juego en equipo",
-    precio: "Gratuito",
     nivel: "Intermedio"
   },
   {
@@ -36,7 +34,6 @@ export const mockTalleres = [
     ocupados: 12,
     instructor: "María González",
     descripcion: "Práctica de yoga con enfoque en bienestar mental",
-    precio: "Gratuito",
     nivel: "Todos los niveles"
   },
   {
@@ -49,7 +46,6 @@ export const mockTalleres = [
     ocupados: 8,
     instructor: "Roberto Chen",
     descripcion: "Técnicas básicas e intermedias de tenis de mesa",
-    precio: "Gratuito",
     nivel: "Principiante/Intermedio"
   },
   {
@@ -62,7 +58,6 @@ export const mockTalleres = [
     ocupados: 22,
     instructor: "Laura Pérez",
     descripcion: "Práctica libre de natación con supervisión",
-    precio: "Gratuito",
     nivel: "Todos los niveles"
   }
 ];
