@@ -124,12 +124,12 @@ export const mockSelecciones = [
     nivel: "Competitivo",
     entrenador: "Patricia Morales",
     horarios: [
-      "Lunes 18:00-20:00",
-      "Miércoles 18:00-20:00", 
-      "Viernes 16:00-18:00"
+      "Lunes Bloque 15-16",
+      "Miércoles Bloque 15-16", 
+      "Viernes Bloque 13-14"
     ],
-    ubicacion: "Cancha Principal",
-    descripcion: "Selección universitaria que participa en el campeonato nacional universitario. Buscamos jugadoras comprometidas con experiencia previa.",
+    ubicacion: "Campus San Joaquín - Cancha Principal",
+    descripcion: "Selección universitaria Campus San Joaquín.",
     requisitos: [
       "Estudiante regular de la universidad",
       "Certificado médico vigente",
@@ -155,7 +155,7 @@ export const mockSelecciones = [
     nivel: "Competitivo",
     entrenador: "Carlos Hernández",
     horarios: [
-      "Martes 19:00-21:00",
+      "Martes Bloque 15-16",
       "Jueves 19:00-21:00",
       "Sábado 09:00-11:00"
     ],
