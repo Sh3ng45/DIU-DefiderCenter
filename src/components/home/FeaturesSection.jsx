@@ -15,7 +15,7 @@ const FeaturesSection = () => {
     {
       icon: MapPin,
       title: "Reservas de Gimnasio",
-      description: "Consulta horarios disponibles y reserva tu bloque de uso del gimnasio. Sistema de calendario intuitivo.",
+      description: "Consulta horarios disponibles y reserva tu bloque de uso del gimnasio.",
       linkText: "Hacer una reserva",
       linkHref: "/gimnasio"
     },

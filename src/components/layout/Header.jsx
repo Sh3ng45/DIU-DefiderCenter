@@ -1,26 +1,74 @@
-import React from 'react';
-import { Search } from 'lucide-react';
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, Home, Dumbbell, Trophy, Calendar } from 'lucide-react';
+import '../../styles/Header.css';
 
-const SearchBox = ({ 
-  value, 
-  onChange, 
-  placeholder = "Buscar...", 
-  className = '',
-  ariaLabel = "Buscar"
-}) => {
+
+const Header = () => {
+  const location = useLocation();
+
+  // Función para determinar si una ruta está activa (Feedback visual)
+  const isActive = (path) => location.pathname === path;
+
   return (
-    <div className={`search-box ${className}`}>
-      <Search className="search-icon" />
-      <input
-        type="text"
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-        className="search-input"
-        aria-label={ariaLabel}
-      />
-    </div>
+    <header className="app-header">
+      <div className="header-container">
+        {/* Logo que enlaza a Home*/}
+        <Link to="/" className="logo-link">
+          <div className="logo">
+            <Trophy className="logo-icon" />
+            <span className="logo-text">USM Defider</span>
+          </div>
+        </Link>
+
+        {/* Navegación principal */}
+        <nav className="main-nav" role="navigation" aria-label="Navegación principal">
+          <ul className="nav-list">
+            <li>
+              <Link 
+                to="/" 
+                className={`nav-link ${isActive('/') ? 'active' : ''}`}
+                aria-current={isActive('/') ? 'page' : undefined}
+              >
+                <Home className="nav-icon" />
+                <span>Inicio</span>
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/talleres" 
+                className={`nav-link ${isActive('/talleres') ? 'active' : ''}`}
+                aria-current={isActive('/talleres') ? 'page' : undefined}
+              >
+                <Calendar className="nav-icon" />
+                <span>Talleres</span>
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/gimnasio" 
+                className={`nav-link ${isActive('/gimnasio') ? 'active' : ''}`}
+                aria-current={isActive('/gimnasio') ? 'page' : undefined}
+              >
+                <Dumbbell className="nav-icon" />
+                <span>Gimnasio</span>
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/selecciones" 
+                className={`nav-link ${isActive('/selecciones') ? 'active' : ''}`}
+                aria-current={isActive('/selecciones') ? 'page' : undefined}
+              >
+                <Trophy className="nav-icon" />
+                <span>Selecciones</span>
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   );
 };
 
-export default SearchBox; 
+export default Header;
