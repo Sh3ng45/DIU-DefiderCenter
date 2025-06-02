@@ -1,10 +1,6 @@
 import React from 'react';
 import { MapPin, Users } from 'lucide-react';
 
-/**
- * SpaceSelector Component - Selector de espacio del gimnasio
- * Implementa principios de React: componente controlado
- */
 const SpaceSelector = ({ 
   selectedEspacio, 
   onEspacioChange, 
