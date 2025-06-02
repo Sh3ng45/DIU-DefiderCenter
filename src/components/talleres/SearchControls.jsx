@@ -2,10 +2,6 @@ import React from 'react';
 import { Filter } from 'lucide-react';
 import SearchBox from '../ui/SearchBox';
 
-/**
- * SearchControls Component - Controles de búsqueda para talleres
- * Implementa principios de React: separación de responsabilidades
- */
 const SearchControls = ({ 
   searchTerm, 
   onSearchChange, 
