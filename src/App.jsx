@@ -1,15 +1,26 @@
-import { useState } from 'react'
-import { SportsActivityCard }  from './components/SportsActivityCard';
-import './styles/App.css'; // Para el grid
-import { activitiesData } from './constants'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/layout/Header';
+import HomePage from './pages/HomePage';
+import TalleresPage from './pages/TalleresPage';
+import GimnasioPage from './pages/GimnasioPage';
+import SeleccionesPage from './pages/SeleccionesPage';
+import './styles/App.css';
 
 function App() {
   return (
-    <div className="activities-grid-container">
-      {activitiesData.map((activity) => (
-        <SportsActivityCard key={activity.id} activity={activity} />
-      ))}
-    </div>
+    <Router>
+      <div className="app">
+        <Header />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/talleres" element={<TalleresPage />} />
+            <Route path="/gimnasio" element={<GimnasioPage />} />
+            <Route path="/selecciones" element={<SeleccionesPage />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 
