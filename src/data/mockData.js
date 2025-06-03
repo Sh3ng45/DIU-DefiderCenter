@@ -4,7 +4,8 @@ export const mockTalleres = [
     id: 1,
     nombre: "Fútbol Principiantes",
     deporte: "futbol",
-    horario: "Lunes y Miércoles Bloque 13-14 ",
+    dia: ["Lunes", "Miércoles"],
+    bloque: "13-14",
     ubicacion: "Cancha 1",
     cupos: 25,
     ocupados: 18,
@@ -16,7 +17,8 @@ export const mockTalleres = [
     id: 2,
     nombre: "Básquetbol Intermedio",
     deporte: "basquetbol",
-    horario: "Martes y Jueves Bloque 11-12",
+    dia: ["Martes", "Jueves"],
+    bloque: "11-12",
     ubicacion: "Gimnasio Principal",
     cupos: 20,
     ocupados: 15,
@@ -28,7 +30,8 @@ export const mockTalleres = [
     id: 3,
     nombre: "Yoga y Mindfulness",
     deporte: "yoga",
-    horario: "Lunes, Miércoles y Viernes Bloque 1-2",
+    dia: ["Lunes", "Miércoles", "Viernes"],
+    bloque: "1-2",
     ubicacion: "Sala Multiuso",
     cupos: 15,
     ocupados: 12,
@@ -40,7 +43,8 @@ export const mockTalleres = [
     id: 4,
     nombre: "Tenis de Mesa",
     deporte: "tenis-mesa",
-    horario: "Martes y Jueves Bloque Bloque 15-16",
+    dia: ["Martes", "Jueves"],
+    bloque: "15-16",
     ubicacion: "Sala de Tenis de Mesa",
     cupos: 12,
     ocupados: 8,
@@ -52,7 +56,8 @@ export const mockTalleres = [
     id: 5,
     nombre: "Natación Libre",
     deporte: "natacion",
-    horario: "Lunes a Viernes Bloque 7-8",
+    dia: ["Miércoles", "Jueves"],
+    bloque: "7-8",
     ubicacion: "Piscina",
     cupos: 30,
     ocupados: 22,
@@ -75,13 +80,16 @@ export const deporteOptions = [
 // Datos de espacios del gimnasio
 export const espaciosGimnasio = [
   { id: 'sala-pesas', nombre: 'Sala de Pesas', capacidad: 25 },
-  { id: 'cancha-multiuso', nombre: 'Cancha Multiuso', capacidad: 40 }
+  { id: 'cancha-multiuso', nombre: 'Cancha Multiuso', capacidad: 2 }
 ];
 
 // Horarios disponibles del gimnasio
 export const horariosDisponibles = [
-  '07:00', '08:00', '09:00', '10:00', '11:00', '12:00',
-  '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00'
+  'Bloque 1-2','Bloque 2-3','Bloque 3-4','Bloque 4-5',
+  'Bloque 5-6','Bloque 6-7','Bloque 7-8','Bloque 8-9',
+  'Bloque 9-10','Bloque 10-11','Bloque 11-12',
+  'Bloque 12-13','Bloque 13-14','Bloque 14-15',
+  'Bloque 15-16','Bloque 16-17','Bloque 17-18',
 ];
 
 // Función para generar reservas mock del gimnasio
@@ -156,10 +164,10 @@ export const mockSelecciones = [
     entrenador: "Carlos Hernández",
     horarios: [
       "Martes Bloque 15-16",
-      "Jueves 19:00-21:00",
-      "Sábado 09:00-11:00"
+      "Jueves Bloque 16-17",
+      "Sábado Bloque 5-6"
     ],
-    ubicacion: "Gimnasio Principal",
+    ubicacion: "Campus San Joaquín - Gimnasio Principal",
     descripcion: "Equipo competitivo que representa a la universidad en la liga nacional. Buscamos jugadores con alto nivel técnico y compromiso.",
     requisitos: [
       "Estudiante regular de la universidad",
@@ -186,12 +194,12 @@ export const mockSelecciones = [
     nivel: "Competitivo",
     entrenador: "Ana López",
     horarios: [
-      "Lunes 06:00-08:00",
-      "Miércoles 06:00-08:00",
-      "Viernes 06:00-08:00",
-      "Sábado 08:00-10:00"
+      "Lunes Bloque 1-2",
+      "Miércoles Bloque 1-2",
+      "Viernes Bloque 1-2",
+      "Sábado Bloque 3-4"
     ],
-    ubicacion: "Piscina Olímpica",
+    ubicacion: "Piscina Olímpica Campus San Joaquín",
     descripcion: "Equipo de natación de alto rendimiento. Participamos en competencias regionales y nacionales. Ambiente de excelencia deportiva.",
     requisitos: [
       "Estudiante regular de la universidad",
@@ -218,10 +226,10 @@ export const mockSelecciones = [
     nivel: "Intermedio-Avanzado",
     entrenador: "Roberto Chen",
     horarios: [
-      "Martes 17:00-19:00",
-      "Jueves 17:00-19:00"
+      "Martes Blouq 7-8",
+      "Jueves Bloque 9-10"
     ],
-    ubicacion: "Sala de Tenis de Mesa",
+    ubicacion: "Campus San Joaquín - Gimnasio",
     descripcion: "Equipo en crecimiento que busca talentos para formar una selección competitiva. Ambiente de aprendizaje y mejora continua.",
     requisitos: [
       "Estudiante regular de la universidad",
