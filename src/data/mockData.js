@@ -11,7 +11,8 @@ export const mockTalleres = [
     ocupados: 18,
     instructor: "Carlos Mendoza",
     descripcion: "Taller enfocado en fundamentos básicos del fútbol",
-    nivel: "Principiante"
+    nivel: "Principiante",
+    imagen: "/src/images/futbol-usm.jpg"
   },
   {
     id: 2,
@@ -24,7 +25,8 @@ export const mockTalleres = [
     ocupados: 15,
     instructor: "Ana Silva",
     descripcion: "Desarrollo de técnicas intermedias y juego en equipo",
-    nivel: "Intermedio"
+    nivel: "Intermedio",
+    imagen: "/src/images/basquetbol-usm.jpg"
   },
   {
     id: 3,
@@ -37,7 +39,8 @@ export const mockTalleres = [
     ocupados: 12,
     instructor: "María González",
     descripcion: "Práctica de yoga con enfoque en bienestar mental",
-    nivel: "Todos los niveles"
+    nivel: "Todos los niveles",
+    imagen: "/src/images/Yoga-intermedio.jpg"
   },
   {
     id: 4,
@@ -50,7 +53,8 @@ export const mockTalleres = [
     ocupados: 8,
     instructor: "Roberto Chen",
     descripcion: "Técnicas básicas e intermedias de tenis de mesa",
-    nivel: "Principiante/Intermedio"
+    nivel: "Principiante/Intermedio",
+    imagen: "/src/images/tenis-de-mesa-usm.jpg"
   },
   {
     id: 5,
@@ -63,7 +67,8 @@ export const mockTalleres = [
     ocupados: 22,
     instructor: "Laura Pérez",
     descripcion: "Práctica libre de natación con supervisión",
-    nivel: "Todos los niveles"
+    nivel: "Todos los niveles",
+    imagen: "/src/images/natacion-usm.jpg"
   }
 ];
 
