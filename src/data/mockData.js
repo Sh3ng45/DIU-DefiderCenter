@@ -6,7 +6,7 @@ export const mockTalleres = [
     deporte: "futbol",
     dia: ["Lunes", "Miércoles"],
     bloque: "13-14",
-    ubicacion: "Cancha 1",
+    ubicacion: "Concepción",
     cupos: 25,
     ocupados: 18,
     instructor: "Carlos Mendoza",
@@ -19,7 +19,7 @@ export const mockTalleres = [
     deporte: "basquetbol",
     dia: ["Martes", "Jueves"],
     bloque: "11-12",
-    ubicacion: "Gimnasio Principal",
+    ubicacion: "Viña del Mar",
     cupos: 20,
     ocupados: 15,
     instructor: "Ana Silva",
@@ -30,9 +30,9 @@ export const mockTalleres = [
     id: 3,
     nombre: "Yoga y Mindfulness",
     deporte: "yoga",
-    dia: ["Lunes", "Miércoles", "Viernes"],
+    dia: ["Lunes", "Miércoles"],
     bloque: "1-2",
-    ubicacion: "Sala Multiuso",
+    ubicacion: "San Joaquín",
     cupos: 15,
     ocupados: 12,
     instructor: "María González",
@@ -45,7 +45,7 @@ export const mockTalleres = [
     deporte: "tenis-mesa",
     dia: ["Martes", "Jueves"],
     bloque: "15-16",
-    ubicacion: "Sala de Tenis de Mesa",
+    ubicacion: "Vitacura",
     cupos: 12,
     ocupados: 8,
     instructor: "Roberto Chen",
@@ -58,7 +58,7 @@ export const mockTalleres = [
     deporte: "natacion",
     dia: ["Miércoles", "Jueves"],
     bloque: "7-8",
-    ubicacion: "Piscina",
+    ubicacion: "Casa Central",
     cupos: 30,
     ocupados: 22,
     instructor: "Laura Pérez",
@@ -67,6 +67,41 @@ export const mockTalleres = [
   }
 ];
 
+// Datos de ubicaciones para filtros
+export const ubicacionOptions = [
+  { value: "", label: "Todas las ubicaciones" },
+  { value: "Concepción", label: "Concepción" },
+  { value: "Viña del Mar", label: "Viña del Mar" },
+  { value: "San Joaquín", label: "San Joaquín" },
+  { value: "Vitacura", label: "Vitacura" },
+  { value: "Casa Central", label: "Casa Central" }
+];
+
+// Datos de bloques horarios para filtros
+export const bloqueOptions = [
+  { value: "", label: "Todos los bloques" },
+  { value: "1-2", label: "Bloque 1-2" },
+  { value: "3-4", label: "Bloque 3-4" },
+  { value: "5-6", label: "Bloque 5-6" },
+  { value: "7-8", label: "Bloque 7-8" },
+  { value: "9-10", label: "Bloque 9-10" },
+  { value: "11-12", label: "Bloque 11-12" },
+  { value: "13-14", label: "Bloque 13-14" },
+  { value: "15-16", label: "Bloque 15-16" },
+  { value: "16-17", label: "Bloque 16-17" },
+  { value: "17-18", label: "Bloque 17-18" }
+];
+
+// Dias de la semana para filtros
+export const diaOptions = [
+  { value: "", label: "Todos los días" },
+  { value: "Lunes", label: "Lunes" },
+  { value: "Martes", label: "Martes" },
+  { value: "Miércoles", label: "Miércoles" },
+  { value: "Jueves", label: "Jueves" },
+  { value: "Viernes", label: "Viernes" },
+  { value: "Sábado", label: "Sábado" }
+];
 // Opciones de deportes para filtros
 export const deporteOptions = [
   { value: "", label: "Todos los deportes" },

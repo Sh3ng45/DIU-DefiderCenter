@@ -23,7 +23,7 @@ const TallerDetail = ({
               <Clock className="detail-icon" />
               <div>
                 <strong>Horario:</strong>
-                <span>{taller.horario}</span>
+                <span>{taller.dia[0]} y {taller.dia[1]} en bloque {taller.bloque}</span>
               </div>
             </div>
             <div className="detail-item">

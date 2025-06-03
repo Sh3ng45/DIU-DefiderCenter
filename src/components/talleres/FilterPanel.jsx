@@ -3,9 +3,18 @@ import React from 'react';
 const FilterPanel = ({ 
   showFilters, 
   selectedDeporte, 
-  onDeporteChange, 
+  selectedDia,
+  selectedBloque,
+  selectedUbicacion,
+  onDeporteChange,
+  onDiaChange,
+  onBloqueChange,
+  onUbicacionChange, 
   onClearFilters,
-  deporteOptions 
+  deporteOptions,
+  diaOptions,
+  bloqueOptions,
+  ubicacionOptions
 }) => {
   if (!showFilters) return null;
 
@@ -27,9 +36,44 @@ const FilterPanel = ({
             </option>
           ))}
         </select>
+        <select
+          id="dia-select"
+          value={selectedDia}
+          onChange={onDiaChange}
+          className="filter-select"
+        >
+          {diaOptions.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+        <select
+          id="bloque-select"
+          value={selectedBloque}
+          onChange={onBloqueChange}
+          className="filter-select"
+        >
+          {bloqueOptions.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+        <select
+          id="ubicacion-select"
+          value={selectedUbicacion}
+          onChange={onUbicacionChange}
+          className="filter-select"
+        >
+          {ubicacionOptions.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
       </div>
 
-      {/* Botón para limpiar filtros - Control y libertad del usuario */}
       <button
         className="clear-filters"
         onClick={onClearFilters}

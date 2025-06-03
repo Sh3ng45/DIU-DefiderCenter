@@ -10,15 +10,13 @@ const SearchControls = ({
 }) => {
   return (
     <div className="search-controls">
-      {/* Buscador principal */}
       <SearchBox
         value={searchTerm}
         onChange={onSearchChange}
-        placeholder="Buscar talleres por nombre o instructor..."
+        placeholder="Buscar talleres por nombre, instructor, dia, bloque o campus..."
         ariaLabel="Buscar talleres"
       />
 
-      {/* Botón para mostrar/ocultar filtros - Revelación progresiva */}
       <button
         className="filter-toggle"
         onClick={onToggleFilters}

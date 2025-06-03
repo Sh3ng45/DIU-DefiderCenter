@@ -22,7 +22,7 @@ const TallerCard = ({
       <div className="taller-info">
         <div className="info-item">
           <Clock className="info-icon" />
-          <span>{taller.horario}</span>
+          <span>{taller.dia[0]} y {taller.dia[1]} en bloque {taller.bloque}</span>
         </div>
         <div className="info-item">
           <MapPin className="info-icon" />

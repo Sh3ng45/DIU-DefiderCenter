@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
 import { SearchControls, FilterPanel, TallerCard, TallerDetail } from '../components/talleres';
-import { mockTalleres, deporteOptions } from '../data/mockData';
+import { mockTalleres, deporteOptions, diaOptions, ubicacionOptions, bloqueOptions } from '../data/mockData';
 import '../styles/TalleresPage.css';
 
 
@@ -11,6 +11,9 @@ const TalleresPage = () => {
   const [filteredTalleres, setFilteredTalleres] = useState(mockTalleres);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDeporte, setSelectedDeporte] = useState('');
+  const [selectedDia, setSelectedDia] = useState('');
+  const [selectedBloque, setSelectedBloque] = useState('');
+  const [selectedUbicacion, setSelectedUbicacion] = useState('');
   const [selectedTaller, setSelectedTaller] = useState(null);
   const [showFilters, setShowFilters] = useState(false);
 
@@ -22,7 +25,10 @@ const TalleresPage = () => {
     if (searchTerm) {
       filtered = filtered.filter(taller =>
         taller.nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        taller.instructor.toLowerCase().includes(searchTerm.toLowerCase())
+        taller.instructor.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        taller.dia.some(dia => dia.toLowerCase().includes(searchTerm.toLowerCase())) ||
+        taller.bloque.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        taller.ubicacion.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 
@@ -30,7 +36,20 @@ const TalleresPage = () => {
     if (selectedDeporte) {
       filtered = filtered.filter(taller => taller.deporte === selectedDeporte);
     }
-
+    // Filtro por horario
+    if (selectedDia) {
+      filtered = filtered.filter(taller =>
+        taller.dia.some(dia => dia.toLowerCase() === selectedDia.toLowerCase())
+      );
+    }
+    // Filtro por bloque
+    if (selectedBloque) {
+      filtered = filtered.filter(taller => taller.bloque === selectedBloque);
+    }
+    //Filtro por ubicación
+    if (selectedUbicacion) {
+      filtered = filtered.filter(taller => taller.ubicacion.toLowerCase() === selectedUbicacion.toLowerCase());
+    }
     setFilteredTalleres(filtered);
   }, [searchTerm, selectedDeporte, talleres]);
 
@@ -53,6 +72,9 @@ const TalleresPage = () => {
   const handleSearchChange = (e) => setSearchTerm(e.target.value);
   const handleToggleFilters = () => setShowFilters(!showFilters);
   const handleDeporteChange = (e) => setSelectedDeporte(e.target.value);
+  const handleDiaChange = (e) => setSelectedDia(e.target.value);
+  const handleBloqueChange = (e) => setSelectedBloque(e.target.value);
+  const handleUbicacionChange = (e) => setSelectedUbicacion(e.target.value);
   const handleClearFilters = () => {
     setSearchTerm('');
     setSelectedDeporte('');
@@ -82,9 +104,18 @@ const TalleresPage = () => {
         <FilterPanel
           showFilters={showFilters}
           selectedDeporte={selectedDeporte}
+          selectedDia={selectedDia}
+          selectedBloque={selectedBloque}
+          selectedUbicacion={selectedUbicacion}
           onDeporteChange={handleDeporteChange}
+          onDiaChange={handleDiaChange}
+          onBloqueChange={handleBloqueChange}
+          onUbicacionChange={handleUbicacionChange}
           onClearFilters={handleClearFilters}
           deporteOptions={deporteOptions}
+          ubicacionOptions={ubicacionOptions}
+          diaOptions={diaOptions}
+          bloqueOptions={bloqueOptions}
         />
 
         {/* Resultados */}
