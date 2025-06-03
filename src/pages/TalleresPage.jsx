@@ -51,7 +51,7 @@ const TalleresPage = () => {
       filtered = filtered.filter(taller => taller.ubicacion.toLowerCase() === selectedUbicacion.toLowerCase());
     }
     setFilteredTalleres(filtered);
-  }, [searchTerm, selectedDeporte, talleres]);
+  }, [searchTerm, selectedDeporte, talleres, selectedDia, selectedBloque, selectedUbicacion]);  
 
   // Función para manejar inscripcion
   const handleInscripcion = (tallerId) => {

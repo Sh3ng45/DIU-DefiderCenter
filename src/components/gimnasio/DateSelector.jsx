@@ -1,10 +1,7 @@
 import React from 'react';
 import { Calendar } from 'lucide-react';
 
-/**
- * DateSelector Component - Selector de fecha para reservas
- * Implementa principios de React: componente controlado
- */
+
 const DateSelector = ({ 
   selectedDate, 
   onDateChange, 

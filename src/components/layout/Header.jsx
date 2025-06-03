@@ -7,7 +7,6 @@ import '../../styles/Header.css';
 const Header = () => {
   const location = useLocation();
 
-  // Función para determinar si una ruta está activa (Feedback visual)
   const isActive = (path) => location.pathname === path;
 
   return (

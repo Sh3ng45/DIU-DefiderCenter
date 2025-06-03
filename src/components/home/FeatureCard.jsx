@@ -1,6 +1,5 @@
 import React from 'react';
 
-///FeatureCard Component - Tarjeta de característica reutilizable
 
 const FeatureCard = ({ 
   icon: Icon, 

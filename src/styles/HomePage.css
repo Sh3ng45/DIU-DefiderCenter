@@ -1,10 +1,10 @@
-/* Home Page Styles - Aplicando principios de Diseño Visual y Jerarquía */
+
 
 .home-page {
-  min-height: calc(100vh - 64px); /* Considerando altura del header */
+  min-height: calc(100vh - 64px); 
 }
 
-/* Hero Section - Punto focal principal */
+
 .hero-section {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -24,7 +24,7 @@
   width: 100%;
 }
 
-/* Jerarquía visual - Título principal más prominente */
+
 .hero-title {
   font-size: 3.5rem;
   font-weight: 800;
@@ -41,7 +41,6 @@
   max-width: 90%;
 }
 
-/* Call-to-actions - Affordances claras y mapeo natural */
 .hero-actions {
   display: flex;
   gap: 1rem;
@@ -88,7 +87,7 @@
   height: 20px;
 }
 
-/* Hero Image - Espacio visual balanceado */
+
 .hero-image {
   display: flex;
   justify-content: center;
@@ -112,7 +111,6 @@
   opacity: 0.8;
 }
 
-/* Features Section - Organización clara y agrupación */
 .features-section {
   padding: 4rem 1rem;
   background: #f8fafc;
@@ -137,7 +135,7 @@
   gap: 2rem;
 }
 
-/* Feature Cards - Principios Gestalt: proximidad y agrupación */
+
 .feature-card {
   background: white;
   padding: 2rem;
@@ -193,7 +191,7 @@
   color: #0d47a1;
 }
 
-/* Stats Section - Información adicional sin sobrecargar */
+
 .stats-section {
   padding: 3rem 1rem;
   background: white;
@@ -224,7 +222,7 @@
   font-weight: 500;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .hero-content {
     grid-template-columns: 1fr;

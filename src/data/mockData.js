@@ -9,7 +9,7 @@ export const mockTalleres = [
     ubicacion: "Concepción",
     cupos: 25,
     ocupados: 18,
-    instructor: "Carlos Mendoza",
+    instructor: "Pablo Fernández Troncoso",
     descripcion: "Taller enfocado en fundamentos básicos del fútbol",
     nivel: "Principiante",
     imagen: "/src/images/futbol-usm.jpg"
@@ -23,21 +23,21 @@ export const mockTalleres = [
     ubicacion: "Viña del Mar",
     cupos: 20,
     ocupados: 15,
-    instructor: "Ana Silva",
+    instructor: "Felipe Reyes Sangermani",
     descripcion: "Desarrollo de técnicas intermedias y juego en equipo",
     nivel: "Intermedio",
     imagen: "/src/images/basquetbol-usm.jpg"
   },
   {
     id: 3,
-    nombre: "Yoga y Mindfulness",
+    nombre: "Yoga",
     deporte: "yoga",
     dia: ["Lunes", "Miércoles"],
     bloque: "1-2",
     ubicacion: "San Joaquín",
     cupos: 15,
     ocupados: 12,
-    instructor: "María González",
+    instructor: "Nicole Monsalve Vargas",
     descripcion: "Práctica de yoga con enfoque en bienestar mental",
     nivel: "Todos los niveles",
     imagen: "/src/images/Yoga-intermedio.jpg"
@@ -51,7 +51,7 @@ export const mockTalleres = [
     ubicacion: "Vitacura",
     cupos: 12,
     ocupados: 8,
-    instructor: "Roberto Chen",
+    instructor: " Isabel Castillo Barrera",
     descripcion: "Técnicas básicas e intermedias de tenis de mesa",
     nivel: "Principiante/Intermedio",
     imagen: "/src/images/tenis-de-mesa-usm.jpg"

@@ -1,4 +1,4 @@
-/* Selecciones Page Styles - Aplicando principios de UX/UI para Antonia */
+
 
 .selecciones-page {
   min-height: calc(100vh - 64px);
@@ -12,7 +12,7 @@
   padding: 0 1rem;
 }
 
-/* Page Header */
+
 .page-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -33,7 +33,7 @@
   line-height: 1.6;
 }
 
-/* Layout de dos paneles */
+
 .selecciones-layout {
   display: grid;
   grid-template-columns: 1fr 500px;
@@ -41,14 +41,14 @@
   align-items: start;
 }
 
-/* Grid de selecciones */
+
 .selecciones-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
 
-/* Selección Cards - Affordances claras */
+
 .seleccion-card {
   background: white;
   border: 1px solid #e5e7eb;
@@ -124,7 +124,7 @@
   line-height: 1.3;
 }
 
-/* Info items - Mapeo natural */
+
 .seleccion-info {
   display: flex;
   flex-direction: column;
@@ -147,7 +147,7 @@
   color: #1976d2;
 }
 
-/* Deadline info - Feedback visual de urgencia */
+
 .deadline-info {
   display: flex;
   align-items: center;
@@ -166,7 +166,7 @@
   height: 16px;
 }
 
-/* Panel de detalles */
+
 .seleccion-detail {
   background: white;
   border: 1px solid #e5e7eb;
@@ -226,7 +226,7 @@
   margin: 0;
 }
 
-/* Detail info */
+
 .detail-info {
   display: flex;
   flex-direction: column;
@@ -263,7 +263,6 @@
   color: #64748b;
 }
 
-/* Horarios list */
 .horarios-list {
   display: flex;
   flex-direction: column;

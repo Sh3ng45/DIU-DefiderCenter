@@ -2,133 +2,7 @@ import React, { useState } from 'react';
 import { Trophy, Clock, MapPin, Users, Star, Calendar, FileText, Send } from 'lucide-react';
 import '../styles/SeleccionesPage.css';
 
-
-
-const mockSelecciones = [
-  {
-    id: 1,
-    nombre: "Selección de Fútbol Femenino",
-    deporte: "Fútbol",
-    categoria: "Femenino",
-    nivel: "Competitivo",
-    entrenador: "Patricia Morales",
-    horarios: [
-      "Lunes 18:00-20:00",
-      "Miércoles 18:00-20:00", 
-      "Viernes 16:00-18:00"
-    ],
-    ubicacion: "Cancha Principal",
-    descripcion: "Selección universitaria que participa en el campeonato nacional universitario. Buscamos jugadoras comprometidas con experiencia previa.",
-    requisitos: [
-      "Estudiante regular de la universidad",
-      "Certificado médico vigente",
-      "Experiencia previa en fútbol (mínimo 2 años)",
-      "Disponibilidad para entrenamientos y competencias",
-      "Compromiso con asistencia mínima del 80%"
-    ],
-    beneficios: [
-      "Participación en torneos nacionales",
-      "Equipamiento deportivo completo",
-      "Preparación física profesional",
-      "Reconocimiento académico por participación deportiva"
-    ],
-    temporada: "Marzo - Noviembre",
-    postulacionesAbiertas: true,
-    fechaLimite: "2025-02-28"
-  },
-  {
-    id: 2,
-    nombre: "Selección de Básquetbol Masculino",
-    deporte: "Básquetbol",
-    categoria: "Masculino",
-    nivel: "Competitivo",
-    entrenador: "Carlos Hernández",
-    horarios: [
-      "Martes 19:00-21:00",
-      "Jueves 19:00-21:00",
-      "Sábado 09:00-11:00"
-    ],
-    ubicacion: "Gimnasio Principal",
-    descripcion: "Equipo competitivo que representa a la universidad en la liga nacional. Buscamos jugadores con alto nivel técnico y compromiso.",
-    requisitos: [
-      "Estudiante regular de la universidad",
-      "Altura mínima: 1.75m",
-      "Experiencia competitiva en básquetbol",
-      "Excelente estado físico",
-      "Disponibilidad para viajes y competencias"
-    ],
-    beneficios: [
-      "Participación en liga nacional universitaria",
-      "Equipamiento y uniformes oficiales",
-      "Preparación técnica especializada",
-      "Becas deportivas disponibles"
-    ],
-    temporada: "Abril - Octubre",
-    postulacionesAbiertas: true,
-    fechaLimite: "2025-03-15"
-  },
-  {
-    id: 3,
-    nombre: "Selección de Natación",
-    deporte: "Natación",
-    categoria: "Mixto",
-    nivel: "Competitivo",
-    entrenador: "Ana López",
-    horarios: [
-      "Lunes 06:00-08:00",
-      "Miércoles 06:00-08:00",
-      "Viernes 06:00-08:00",
-      "Sábado 08:00-10:00"
-    ],
-    ubicacion: "Piscina Olímpica",
-    descripcion: "Equipo de natación de alto rendimiento. Participamos en competencias regionales y nacionales. Ambiente de excelencia deportiva.",
-    requisitos: [
-      "Estudiante regular de la universidad",
-      "Dominio de al menos 3 estilos de natación",
-      "Tiempos competitivos en alguna distancia",
-      "Disponibilidad horarios matutinos",
-      "Compromiso de largo plazo (mínimo 1 año)"
-    ],
-    beneficios: [
-      "Entrenamiento de alto rendimiento",
-      "Participación en competencias nacionales",
-      "Acceso a instalaciones especializadas",
-      "Seguimiento nutricional y médico"
-    ],
-    temporada: "Todo el año",
-    postulacionesAbiertas: false,
-    fechaLimite: "2025-01-31"
-  },
-  {
-    id: 4,
-    nombre: "Selección de Tenis de Mesa",
-    deporte: "Tenis de Mesa",
-    categoria: "Mixto",
-    nivel: "Intermedio-Avanzado",
-    entrenador: "Roberto Chen",
-    horarios: [
-      "Martes 17:00-19:00",
-      "Jueves 17:00-19:00"
-    ],
-    ubicacion: "Sala de Tenis de Mesa",
-    descripcion: "Equipo en crecimiento que busca talentos para formar una selección competitiva. Ambiente de aprendizaje y mejora continua.",
-    requisitos: [
-      "Estudiante regular de la universidad",
-      "Conocimientos básicos de tenis de mesa",
-      "Actitud de aprendizaje y mejora",
-      "Disponibilidad para entrenamientos regulares"
-    ],
-    beneficios: [
-      "Entrenamiento técnico especializado",
-      "Equipamiento oficial",
-      "Participación en torneos universitarios",
-      "Desarrollo de habilidades competitivas"
-    ],
-    temporada: "Marzo - Diciembre",
-    postulacionesAbiertas: true,
-    fechaLimite: "2025-02-20"
-  }
-];
+import { mockSelecciones } from '../data/mockData';
 
 const SeleccionesPage = () => {
   const [selectedSeleccion, setSelectedSeleccion] = useState(null);
@@ -186,7 +60,7 @@ const SeleccionesPage = () => {
         <div className="page-header">
           <h1 className="page-title">Selecciones Deportivas</h1>
           <p className="page-subtitle">
-            Descubre los equipos deportivos universitarios, conoce sus requisitos y postula para formar parte de la excelencia deportiva USFA.
+            Descubre los equipos deportivos universitarios, conoce sus requisitos y postula para formar parte de la excelencia deportiva USM.
           </p>
         </div>
 
