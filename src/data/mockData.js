@@ -288,3 +288,22 @@ export const mockSelecciones = [
     fechaLimite: "2025-02-20"
   }
 ]; 
+
+export const campusData = [
+  {
+    name: "Campus Casa Central Valparaíso",
+    socialLinks: {
+      instagram: "https://www.instagram.com/defider.usm/",
+      youtube: "https://www.youtube.com/channel/UCtNqvukh8tbSa3OK5XiqLew", 
+      facebook: "https://www.facebook.com/defiderusm"
+    }
+  },
+  {
+    name: "Campus Santiago",
+    socialLinks: {
+      instagram: "https://www.instagram.com/defider_usm/",
+      youtube: "https://www.youtube.com/channel/UCEOX24hYZBXGuFJGc4Skcag",
+      facebook: "https://www.facebook.com/defidersantiago/"
+    }
+  }
+];
