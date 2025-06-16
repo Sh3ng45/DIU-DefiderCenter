@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Home, Dumbbell, Trophy, Calendar } from 'lucide-react';
+import { Menu, X, Home, Dumbbell, Trophy, Calendar, User, LogOut } from 'lucide-react';
 import '../../styles/Header.css';
 
 
@@ -66,6 +66,13 @@ const Header = () => {
             </li>
           </ul>
         </nav>
+
+        <div className="user-session-controls">
+          <div className="user-info">
+            <User className="user-icon" />
+            <span>Tomás</span>
+          </div>
+        </div>
       </div>
     </header>
   );
