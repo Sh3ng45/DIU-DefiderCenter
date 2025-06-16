@@ -15,7 +15,7 @@ const TallerCard = ({
       aria-label={`Ver detalles del taller ${taller.nombre}`}
     >
       <div className="taller-card-content">
-        {/* Imagen del taller */}
+
         <div className="taller-image">
           <img 
             src={taller.imagen || '/images/default-taller.jpg'} 
@@ -24,7 +24,6 @@ const TallerCard = ({
           />
         </div>
 
-        {/* Contenido de texto */}
         <div className="taller-text-content">
           <div className="taller-header">
             <h3 className="taller-name">{taller.nombre}</h3>
@@ -34,7 +33,12 @@ const TallerCard = ({
           <div className="taller-info">
             <div className="info-item">
               <Clock className="info-icon" />
-              <span>{taller.dia[0]} y {taller.dia[1]} en bloque {taller.bloque}</span>
+              <span>
+                {taller.dia.length === 1 
+                  ? taller.dia[0] 
+                  : taller.dia.join(' y ')} 
+                {' en bloque ' + taller.bloque}
+              </span>
             </div>
             <div className="info-item">
               <MapPin className="info-icon" />
@@ -46,7 +50,7 @@ const TallerCard = ({
             </div>
           </div>
 
-          {/* Indicador visual de disponibilidad */}
+
           <div className="cupos-indicator">
             <div className="cupos-bar">
               <div

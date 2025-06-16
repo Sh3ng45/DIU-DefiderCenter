@@ -1,74 +1,643 @@
 // Datos de talleres deportivos
 export const mockTalleres = [
   {
-    id: 1,
-    nombre: "Fútbol Principiantes",
-    deporte: "futbol",
-    dia: ["Lunes", "Miércoles"],
-    bloque: "13-14",
-    ubicacion: "Concepción",
-    cupos: 25,
-    ocupados: 18,
-    instructor: "Pablo Fernández Troncoso",
-    descripcion: "Taller enfocado en fundamentos básicos del fútbol",
-    nivel: "Principiante",
-    imagen: "/src/images/futbol-usm.jpg"
+    "id": 1,
+    "nombre": "Ajedrez",
+    "deporte": "Ajedrez",
+    "dia": [
+      "Jueves"
+    ],
+    "bloque": "7-8",
+    "ubicacion": "Campus Casa Central",
+    "cupos": 25,
+    "ocupados": 15,
+    "instructor": "Raúl Molina Muñoz",
+    "descripcion": "Taller de Ajedrez.",
+    "nivel": "Todos los niveles",
+    "imagen": null
   },
   {
-    id: 2,
-    nombre: "Básquetbol Intermedio",
-    deporte: "basquetbol",
-    dia: ["Martes", "Jueves"],
-    bloque: "11-12",
-    ubicacion: "Viña del Mar",
-    cupos: 20,
-    ocupados: 15,
-    instructor: "Felipe Reyes Sangermani",
-    descripcion: "Desarrollo de técnicas intermedias y juego en equipo",
-    nivel: "Intermedio",
-    imagen: "/src/images/basquetbol-usm.jpg"
+    "id": 2,
+    "nombre": "Tenis de Mesa",
+    "deporte": "Tenis de Mesa",
+    "dia": [
+      "Jueves"
+    ],
+    "bloque": "13-14",
+    "ubicacion": "Campus San Joaquín",
+    "cupos": 30,
+    "ocupados": 28,
+    "instructor": "Isabel Castillo Barrera",
+    "descripcion": "Taller de Tenis de Mesa.",
+    "nivel": "Todos los niveles",
+    "imagen": null
   },
   {
-    id: 3,
-    nombre: "Yoga",
-    deporte: "yoga",
-    dia: ["Lunes", "Miércoles"],
-    bloque: "1-2",
-    ubicacion: "San Joaquín",
-    cupos: 15,
-    ocupados: 12,
-    instructor: "Nicole Monsalve Vargas",
-    descripcion: "Práctica de yoga con enfoque en bienestar mental",
-    nivel: "Todos los niveles",
-    imagen: "/src/images/Yoga-intermedio.jpg"
+    "id": 3,
+    "nombre": "Básquetbol",
+    "deporte": "Básquetbol",
+    "dia": [
+      "Viernes"
+    ],
+    "bloque": "11-12",
+    "ubicacion": "Campus Casa Central",
+    "cupos": 40,
+    "ocupados": 35,
+    "instructor": "Mauricio Ramírez Alegría",
+    "descripcion": "Taller de Básquetbol.",
+    "nivel": "Todos los niveles",
+    "imagen": null
   },
   {
-    id: 4,
-    nombre: "Tenis de Mesa",
-    deporte: "tenis-mesa",
-    dia: ["Martes", "Jueves"],
-    bloque: "15-16",
-    ubicacion: "Vitacura",
-    cupos: 12,
-    ocupados: 8,
-    instructor: " Isabel Castillo Barrera",
-    descripcion: "Técnicas básicas e intermedias de tenis de mesa",
-    nivel: "Principiante/Intermedio",
-    imagen: "/src/images/tenis-de-mesa-usm.jpg"
+    "id": 4,
+    "nombre": "Básquetbol 3x3 (Vitacura)",
+    "deporte": "Básquetbol",
+    "dia": [
+      "Lunes"
+    ],
+    "bloque": "9-10",
+    "ubicacion": "Campus Vitacura",
+    "cupos": 20,
+    "ocupados": 11,
+    "instructor": "Felipe Reyes Sangermani",
+    "descripcion": "Taller de Básquetbol 3x3.",
+    "nivel": "Todos los niveles",
+    "imagen": null
   },
   {
-    id: 5,
-    nombre: "Natación Libre",
-    deporte: "natacion",
-    dia: ["Miércoles", "Jueves"],
-    bloque: "7-8",
-    ubicacion: "Casa Central",
-    cupos: 30,
-    ocupados: 22,
-    instructor: "Laura Pérez",
-    descripcion: "Práctica libre de natación con supervisión",
-    nivel: "Todos los niveles",
-    imagen: "/src/images/natacion-usm.jpg"
+    "id": 5,
+    "nombre": "Básquetbol 3x3 (San Joaquín)",
+    "deporte": "Básquetbol",
+    "dia": [
+      "Martes"
+    ],
+    "bloque": "7-8",
+    "ubicacion": "Campus San Joaquín",
+    "cupos": 20,
+    "ocupados": 19,
+    "instructor": "Felipe Reyes Sangermani",
+    "descripcion": "Taller de Básquetbol 3x3.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 6,
+    "nombre": "Fútbol",
+    "deporte": "Fútbol",
+    "dia": [
+      "Lunes"
+    ],
+    "bloque": "13-14",
+    "ubicacion": "Campus Casa Central",
+    "cupos": 45,
+    "ocupados": 45,
+    "instructor": "Pablo Fernández Troncoso",
+    "descripcion": "Taller de Fútbol.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 7,
+    "nombre": "Karate (San Joaquín)",
+    "deporte": "Karate",
+    "dia": [
+      "Jueves"
+    ],
+    "bloque": "9-10",
+    "ubicacion": "Campus San Joaquín",
+    "cupos": 25,
+    "ocupados": 20,
+    "instructor": "Patricio Cifra Abarca",
+    "descripcion": "Taller de Karate.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 8,
+    "nombre": "Karate (Vitacura)",
+    "deporte": "Karate",
+    "dia": [
+      "Martes"
+    ],
+    "bloque": "7-8",
+    "ubicacion": "Campus Vitacura",
+    "cupos": 25,
+    "ocupados": 18,
+    "instructor": "Patricio Cifra Abarca",
+    "descripcion": "Taller de Karate.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 9,
+    "nombre": "Futsal",
+    "deporte": "Futsal",
+    "dia": [
+      "Miércoles"
+    ],
+    "bloque": "11-12",
+    "ubicacion": "Campus Casa Central",
+    "cupos": 30,
+    "ocupados": 22,
+    "instructor": "Luis Le-cerf Paredes",
+    "descripcion": "Taller de Futsal.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 10,
+    "nombre": "Futsal",
+    "deporte": "Futsal",
+    "dia": [
+      "Miércoles"
+    ],
+    "bloque": "13-14",
+    "ubicacion": "Campus San Joaquín",
+    "cupos": 30,
+    "ocupados": 30,
+    "instructor": "Jose Silva Albornoz",
+    "descripcion": "Taller de Futsal.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 11,
+    "nombre": "Gimnasia Artística",
+    "deporte": "Gimnasia",
+    "dia": [
+      "Martes",
+      "Jueves"
+    ],
+    "bloque": "7-8",
+    "ubicacion": "Campus Casa Central",
+    "cupos": 20,
+    "ocupados": 16,
+    "instructor": "Bruce Gallardo",
+    "descripcion": "Taller de Gimnasia Artística.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 12,
+    "nombre": "Judo",
+    "deporte": "Judo",
+    "dia": [
+      "Lunes",
+      "Miércoles",
+      "Viernes"
+    ],
+    "bloque": "15-16",
+    "ubicacion": "Campus Casa Central",
+    "cupos": 25,
+    "ocupados": 14,
+    "instructor": "Gastón Vergara Verdejo",
+    "descripcion": "Taller de Judo.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 13,
+    "nombre": "Karate",
+    "deporte": "Karate",
+    "dia": [
+      "Jueves"
+    ],
+    "bloque": "3-4",
+    "ubicacion": "Campus Casa Central",
+    "cupos": 25,
+    "ocupados": 21,
+    "instructor": "Germán Oliveros Santos",
+    "descripcion": "Taller de Karate.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 14,
+    "nombre": "Running",
+    "deporte": "Running",
+    "dia": [
+      "Martes",
+      "Jueves"
+    ],
+    "bloque": "5-6",
+    "ubicacion": "Campus Casa Central",
+    "cupos": 35,
+    "ocupados": 31,
+    "instructor": "Miguel Gonzalez Vergara",
+    "descripcion": "Taller de Running.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 15,
+    "nombre": "Tenis",
+    "deporte": "Tenis",
+    "dia": [
+      "Jueves"
+    ],
+    "bloque": "5-6",
+    "ubicacion": "Campus Casa Central",
+    "cupos": 15,
+    "ocupados": 12,
+    "instructor": "Enrique Cabello Contreras",
+    "descripcion": "Taller de Tenis.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 16,
+    "nombre": "Balonmano",
+    "deporte": "Balonmano",
+    "dia": [
+      "Viernes"
+    ],
+    "bloque": "9-10",
+    "ubicacion": "Campus San Joaquín",
+    "cupos": 30,
+    "ocupados": 23,
+    "instructor": "José Sanchez Maldonado",
+    "descripcion": "Taller de Balonmano.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 17,
+    "nombre": "Taekwondo",
+    "deporte": "Taekwondo",
+    "dia": [
+      "Martes",
+      "Viernes"
+    ],
+    "bloque": "13-14,11-12",
+    "ubicacion": "Campus Casa Central",
+    "cupos": 25,
+    "ocupados": 24,
+    "instructor": "Sebastián Aguilar Gajardo",
+    "descripcion": "Taller de Taekwondo.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 18,
+    "nombre": "Vóleibol Playa",
+    "deporte": "Vóleibol",
+    "dia": [
+      "Jueves"
+    ],
+    "bloque": "9-10",
+    "ubicacion": "Campus San Joaquín",
+    "cupos": 20,
+    "ocupados": 18,
+    "instructor": "Luis Bugueño Lizana",
+    "descripcion": "Taller de Vóleibol Playa.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 19,
+    "nombre": "Ultimate Frisbee",
+    "deporte": "Ultimate Frisbee",
+    "dia": [
+      "Jueves",
+      "Sábado"
+    ],
+    "bloque": "13-14,5-6",
+    "ubicacion": "Campus Casa Central",
+    "cupos": 30,
+    "ocupados": 15,
+    "instructor": "Antonio López Pérez",
+    "descripcion": "Taller de Ultimate Frisbee.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 20,
+    "nombre": "Vóleibol",
+    "deporte": "Vóleibol",
+    "dia": [
+      "Martes"
+    ],
+    "bloque": "9-10",
+    "ubicacion": "Campus San Joaquín",
+    "cupos": 40,
+    "ocupados": 33,
+    "instructor": "Luis Bugueño Lizana",
+    "descripcion": "Taller de Vóleibol.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 21,
+    "nombre": "Vóleibol",
+    "deporte": "Vóleibol",
+    "dia": [
+      "Martes"
+    ],
+    "bloque": "7-8",
+    "ubicacion": "Campus Casa Central",
+    "cupos": 40,
+    "ocupados": 40,
+    "instructor": "Jorge Botau Mancilla",
+    "descripcion": "Taller de Vóleibol.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 22,
+    "nombre": "Tenis",
+    "deporte": "Tenis",
+    "dia": [
+      "Jueves"
+    ],
+    "bloque": "7-8",
+    "ubicacion": "Campus Vitacura",
+    "cupos": 15,
+    "ocupados": 15,
+    "instructor": "Claudio Barrera",
+    "descripcion": "Taller de Tenis.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 23,
+    "nombre": "Entrenamiento Funcional",
+    "deporte": "Fitness",
+    "dia": [
+      "Martes",
+      "Viernes"
+    ],
+    "bloque": "3-4,7-8",
+    "ubicacion": "Campus Casa Central",
+    "cupos": 35,
+    "ocupados": 28,
+    "instructor": "Gonzalo Riesco Camus, Jorge Botau Mancilla",
+    "descripcion": "Taller de Entrenamiento Funcional.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 24,
+    "nombre": "GAP",
+    "deporte": "Fitness",
+    "dia": [
+      "Martes",
+      "Viernes"
+    ],
+    "bloque": "11-12,3-4",
+    "ubicacion": "Campus Casa Central",
+    "cupos": 35,
+    "ocupados": 32,
+    "instructor": "Gonzalo Riesco Camus, Jorge Botau Mancilla",
+    "descripcion": "Taller de GAP (Glúteos, Abdominales y Piernas).",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 25,
+    "nombre": "Pilates",
+    "deporte": "Fitness",
+    "dia": [
+      "Lunes",
+      "Jueves"
+    ],
+    "bloque": "11-12,7-8",
+    "ubicacion": "Campus Casa Central",
+    "cupos": 30,
+    "ocupados": 29,
+    "instructor": "Nicole Monsalve Vargas",
+    "descripcion": "Taller de Pilates.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 26,
+    "nombre": "TRX",
+    "deporte": "Fitness",
+    "dia": [
+      "Jueves",
+      "Viernes"
+    ],
+    "bloque": "9-10,5-6",
+    "ubicacion": "Campus Casa Central",
+    "cupos": 20,
+    "ocupados": 13,
+    "instructor": "Gonzalo Riesco Camus",
+    "descripcion": "Taller de TRX.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 27,
+    "nombre": "Entrenamiento Funcional (San Joaquín)",
+    "deporte": "Fitness",
+    "dia": [
+      "Lunes",
+      "Jueves"
+    ],
+    "bloque": "7-8",
+    "ubicacion": "Campus San Joaquín",
+    "cupos": 35,
+    "ocupados": 30,
+    "instructor": "Karen Cea",
+    "descripcion": "Taller de Entrenamiento Funcional.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 28,
+    "nombre": "Entrenamiento Funcional (Vitacura)",
+    "deporte": "Fitness",
+    "dia": [
+      "Martes"
+    ],
+    "bloque": "7-8",
+    "ubicacion": "Campus Vitacura",
+    "cupos": 35,
+    "ocupados": 25,
+    "instructor": "Karen Cea",
+    "descripcion": "Taller de Entrenamiento Funcional.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 29,
+    "nombre": "Yoga",
+    "deporte": "Fitness",
+    "dia": [
+      "Lunes",
+      "Jueves"
+    ],
+    "bloque": "5-6,11-12",
+    "ubicacion": "Campus Casa Central",
+    "cupos": 30,
+    "ocupados": 30,
+    "instructor": "Nicole Monsalve Vargas",
+    "descripcion": "Taller de Yoga.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 30,
+    "nombre": "Spinning",
+    "deporte": "Fitness",
+    "dia": [
+      "Martes",
+      "Jueves"
+    ],
+    "bloque": "7-8",
+    "ubicacion": "Campus San Joaquín",
+    "cupos": 25,
+    "ocupados": 22,
+    "instructor": "Valeska Ahumada",
+    "descripcion": "Taller de Spinning.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 31,
+    "nombre": "Salsa (San Joaquín)",
+    "deporte": "Danza",
+    "dia": [
+      "Viernes"
+    ],
+    "bloque": "7-8",
+    "ubicacion": "Campus San Joaquín",
+    "cupos": 30,
+    "ocupados": 21,
+    "instructor": "Haruko Tsukame Saez",
+    "descripcion": "Taller de Salsa.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 32,
+    "nombre": "Salsa (Vitacura)",
+    "deporte": "Danza",
+    "dia": [
+      "Jueves"
+    ],
+    "bloque": "7-8",
+    "ubicacion": "Campus Vitacura",
+    "cupos": 30,
+    "ocupados": 18,
+    "instructor": "Haruko Tsukame Saez",
+    "descripcion": "Taller de Salsa.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 33,
+    "nombre": "Danza Contemporánea",
+    "deporte": "Danza",
+    "dia": [
+      "Martes"
+    ],
+    "bloque": "11-12",
+    "ubicacion": "Campus Casa Central",
+    "cupos": 25,
+    "ocupados": 17,
+    "instructor": "Eveleen Rojas Salgado",
+    "descripcion": "Taller de Danza Contemporánea.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 34,
+    "nombre": "Danza (San Joaquín)",
+    "deporte": "Danza",
+    "dia": [
+      "Martes",
+      "Viernes"
+    ],
+    "bloque": "7-8,9-12",
+    "ubicacion": "Campus San Joaquín",
+    "cupos": 25,
+    "ocupados": 25,
+    "instructor": "Haruko Tsukame Saez",
+    "descripcion": "Taller de Danza.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 35,
+    "nombre": "Danza (Vitacura)",
+    "deporte": "Danza",
+    "dia": [
+      "Jueves"
+    ],
+    "bloque": "7-8",
+    "ubicacion": "Campus Vitacura",
+    "cupos": 25,
+    "ocupados": 16,
+    "instructor": "Haruko Tsukame Saez",
+    "descripcion": "Taller de Danza.",
+    "nivel": "Todos losagros",
+    "imagen": null
+  },
+  {
+    "id": 36,
+    "nombre": "Folclor",
+    "deporte": "Danza",
+    "dia": [
+      "Martes"
+    ],
+    "bloque": "5-8,9-10",
+    "ubicacion": "Campus Casa Central",
+    "cupos": 30,
+    "ocupados": 20,
+    "instructor": "Eveleen Rojas Salgado",
+    "descripcion": "Taller de Folclor.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 37,
+    "nombre": "Folclor (San Joaquín)",
+    "deporte": "Danza",
+    "dia": [
+      "Martes",
+      "Viernes"
+    ],
+    "bloque": "7-8,13-16",
+    "ubicacion": "Campus San Joaquín",
+    "cupos": 30,
+    "ocupados": 26,
+    "instructor": "Haruko Tsukame Saez",
+    "descripcion": "Taller de Folclor.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 38,
+    "nombre": "Teatro (San Joaquín)",
+    "deporte": "Teatro",
+    "dia": [
+      "Jueves"
+    ],
+    "bloque": "7-8",
+    "ubicacion": "Campus San Joaquín",
+    "cupos": 20,
+    "ocupados": 12,
+    "instructor": "José Gallardo Hurtado",
+    "descripcion": "Taller de Teatro.",
+    "nivel": "Todos los niveles",
+    "imagen": null
+  },
+  {
+    "id": 39,
+    "nombre": "Teatro (Vitacura)",
+    "deporte": "Teatro",
+    "dia": [
+      "Martes"
+    ],
+    "bloque": "7-8",
+    "ubicacion": "Campus Vitacura",
+    "cupos": 20,
+    "ocupados": 19,
+    "instructor": "José Gallardo Hurtado",
+    "descripcion": "Taller de Teatro.",
+    "nivel": "Todos los niveles",
+    "imagen": null
   }
 ];
 
