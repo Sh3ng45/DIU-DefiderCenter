@@ -36,6 +36,11 @@ const FilterPanel = ({
             </option>
           ))}
         </select>
+      </div>
+      <div className="filter-group">
+        <label htmlFor="dia-select" className="filter-label">
+          Día:
+        </label>
         <select
           id="dia-select"
           value={selectedDia}
@@ -48,6 +53,11 @@ const FilterPanel = ({
             </option>
           ))}
         </select>
+      </div>
+      <div className="filter-group">
+        <label htmlFor="bloque-select" className="filter-label">
+          Bloque Horario:
+        </label>
         <select
           id="bloque-select"
           value={selectedBloque}
@@ -60,6 +70,11 @@ const FilterPanel = ({
             </option>
           ))}
         </select>
+      </div>
+      <div className="filter-group">
+        <label htmlFor="ubicacion-select" className="filter-label">
+          Ubicación:
+        </label>
         <select
           id="ubicacion-select"
           value={selectedUbicacion}
