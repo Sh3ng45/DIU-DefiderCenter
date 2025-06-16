@@ -78,6 +78,9 @@ const TalleresPage = () => {
   const handleClearFilters = () => {
     setSearchTerm('');
     setSelectedDeporte('');
+    setSelectedDia(''); 
+    setSelectedBloque('');  
+    setSelectedUbicacion('');
     setShowFilters(false);
   };
 

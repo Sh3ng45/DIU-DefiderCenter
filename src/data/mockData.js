@@ -644,11 +644,9 @@ export const mockTalleres = [
 // Datos de ubicaciones para filtros
 export const ubicacionOptions = [
   { value: "", label: "Todas las ubicaciones" },
-  { value: "Concepción", label: "Concepción" },
-  { value: "Viña del Mar", label: "Viña del Mar" },
-  { value: "San Joaquín", label: "San Joaquín" },
-  { value: "Vitacura", label: "Vitacura" },
-  { value: "Casa Central", label: "Casa Central" }
+  { value: "Campus Casa Central", label: "Campus Casa Central" },
+  { value: "Campus San Joaquín", label: "Campus San Joaquín" },
+  { value: "Campus Vitacura", label: "Campus Vitacura" }
 ];
 
 // Datos de bloques horarios para filtros
@@ -679,11 +677,23 @@ export const diaOptions = [
 // Opciones de deportes para filtros
 export const deporteOptions = [
   { value: "", label: "Todos los deportes" },
-  { value: "futbol", label: "Fútbol" },
-  { value: "basquetbol", label: "Básquetbol" },
-  { value: "yoga", label: "Yoga" },
-  { value: "tenis-mesa", label: "Tenis de Mesa" },
-  { value: "natacion", label: "Natación" }
+  { value: "Ajedrez", label: "Ajedrez" },
+  { value: "Tenis de Mesa", label: "Tenis de Mesa" },
+  { value: "Básquetbol", label: "Básquetbol" },
+  { value: "Fútbol", label: "Fútbol" },
+  { value: "Karate", label: "Karate" },
+  { value: "Futsal", label: "Futsal" },
+  { value: "Gimnasia", label: "Gimnasia" },
+  { value: "Judo", label: "Judo" },
+  { value: "Running", label: "Running" },
+  { value: "Tenis", label: "Tenis" },
+  { value: "Balonmano", label: "Balonmano" },
+  { value: "Taekwondo", label: "Taekwondo" },
+  { value: "Vóleibol", label: "Vóleibol" },
+  { value: "Ultimate Frisbee", label: "Ultimate Frisbee" },
+  { value: "Fitness", label: "Fitness" },
+  { value: "Danza", label: "Danza" },
+  { value: "Teatro", label: "Teatro" }
 ];
 
 // Datos de espacios del gimnasio
