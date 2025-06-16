@@ -12,25 +12,56 @@ const GimnasioPage = () => {
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [reservaDetails, setReservaDetails] = useState(null);
 
-  // Función para obtener los próximos 7 días
   const getNextWeekDays = () => {
     const days = [];
     const today = new Date();
-    
-    for (let i = 0; i < 7; i++) {
+    let daysAdded = 0;
+    let i = 0;
+
+    while (daysAdded < 6) {
       const date = new Date(today);
       date.setDate(today.getDate() + i);
-      days.push({
-        date: date.toISOString().split('T')[0],
-        display: date.toLocaleDateString('es-ES', { 
-          weekday: 'short', 
-          day: 'numeric',
-          month: 'short'
-        }),
-        isToday: i === 0
-      });
+      
+      // 0 es Domingo, 1 es Lunes, ..., 6 es Sábado
+      // Solo agregar si no es Domingo (getDay() !== 0)
+      if (date.getDay() !== 0) {
+        days.push({
+          date: date.toISOString().split('T')[0],
+          display: date.toLocaleDateString('es-ES', { 
+            weekday: 'short', 
+            day: 'numeric',
+            month: 'short'
+          }),
+          isToday: date.toDateString() === today.toDateString() && i === 0 // Ajustar isToday para la fecha actual real
+        });
+        daysAdded++;
+      }
+      i++;
     }
     
+    // Asegurar que 'isToday' se marque correctamente si el primer día hábil es hoy
+    if (days.length > 0) {
+        const firstDayDate = new Date(days[0].date + 'T00:00:00'); // Asegurar que se compara solo la fecha
+        const todayDateOnly = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+        if (firstDayDate.getTime() === todayDateOnly.getTime()) {
+            days[0].isToday = true;
+        } else {
+            // Si el primer día no es hoy, ningún día es 'isToday' en este contexto de "próximos 7 días hábiles"
+            // o podrías buscar si 'today' está en la lista y marcarlo.
+            // Por simplicidad, si el primer día hábil no es hoy, no marcamos ninguno como 'isToday'.
+            // Opcionalmente, puedes iterar 'days' para encontrar si 'today' (si es hábil) está en la lista.
+            days.forEach(day => {
+                const currentDate = new Date(day.date + 'T00:00:00');
+                if (currentDate.getTime() === todayDateOnly.getTime() && today.getDay() !== 0) {
+                    day.isToday = true;
+                } else {
+                    day.isToday = false; // Asegurar que otros no se marquen incorrectamente
+                }
+            });
+        }
+    }
+
+
     return days;
   };
 
