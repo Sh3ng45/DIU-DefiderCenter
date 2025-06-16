@@ -14,7 +14,7 @@ export const mockTalleres = [
     "instructor": "Raúl Molina Muñoz",
     "descripcion": "Taller de Ajedrez.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/card-ajedrez.jpg"
   },
   {
     "id": 2,
@@ -30,7 +30,7 @@ export const mockTalleres = [
     "instructor": "Isabel Castillo Barrera",
     "descripcion": "Taller de Tenis de Mesa.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/card-tenisdemesa.jpg"
   },
   {
     "id": 3,
@@ -46,7 +46,7 @@ export const mockTalleres = [
     "instructor": "Mauricio Ramírez Alegría",
     "descripcion": "Taller de Básquetbol.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2023/03/IMG_0056.jpg"
   },
   {
     "id": 4,
@@ -62,7 +62,7 @@ export const mockTalleres = [
     "instructor": "Felipe Reyes Sangermani",
     "descripcion": "Taller de Básquetbol 3x3.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2023/03/IMG_0032.jpg"
   },
   {
     "id": 5,
@@ -78,7 +78,7 @@ export const mockTalleres = [
     "instructor": "Felipe Reyes Sangermani",
     "descripcion": "Taller de Básquetbol 3x3.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2023/03/IMG_0032.jpg"
   },
   {
     "id": 6,
@@ -94,7 +94,7 @@ export const mockTalleres = [
     "instructor": "Pablo Fernández Troncoso",
     "descripcion": "Taller de Fútbol.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/card-futbol2.jpg"
   },
   {
     "id": 7,
@@ -110,7 +110,7 @@ export const mockTalleres = [
     "instructor": "Patricio Cifra Abarca",
     "descripcion": "Taller de Karate.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/card-karate2.jpg"
   },
   {
     "id": 8,
@@ -126,7 +126,7 @@ export const mockTalleres = [
     "instructor": "Patricio Cifra Abarca",
     "descripcion": "Taller de Karate.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/card-karate2.jpg"
   },
   {
     "id": 9,
@@ -142,7 +142,7 @@ export const mockTalleres = [
     "instructor": "Luis Le-cerf Paredes",
     "descripcion": "Taller de Futsal.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/card-futsal.jpg"
   },
   {
     "id": 10,
@@ -158,7 +158,7 @@ export const mockTalleres = [
     "instructor": "Jose Silva Albornoz",
     "descripcion": "Taller de Futsal.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/card-futsal.jpg"
   },
   {
     "id": 11,
@@ -175,7 +175,7 @@ export const mockTalleres = [
     "instructor": "Bruce Gallardo",
     "descripcion": "Taller de Gimnasia Artística.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/card-gimnasia-artistica.jpg"
   },
   {
     "id": 12,
@@ -193,7 +193,7 @@ export const mockTalleres = [
     "instructor": "Gastón Vergara Verdejo",
     "descripcion": "Taller de Judo.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/card-judo2.jpg"
   },
   {
     "id": 13,
@@ -209,7 +209,7 @@ export const mockTalleres = [
     "instructor": "Germán Oliveros Santos",
     "descripcion": "Taller de Karate.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/card-karate2.jpg"
   },
   {
     "id": 14,
@@ -226,7 +226,7 @@ export const mockTalleres = [
     "instructor": "Miguel Gonzalez Vergara",
     "descripcion": "Taller de Running.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/card-running.jpg"
   },
   {
     "id": 15,
@@ -242,7 +242,7 @@ export const mockTalleres = [
     "instructor": "Enrique Cabello Contreras",
     "descripcion": "Taller de Tenis.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/card-tenis.jpg"
   },
   {
     "id": 16,
@@ -258,7 +258,7 @@ export const mockTalleres = [
     "instructor": "José Sanchez Maldonado",
     "descripcion": "Taller de Balonmano.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2023/03/IMG_0044.jpg"
   },
   {
     "id": 17,
@@ -275,8 +275,9 @@ export const mockTalleres = [
     "instructor": "Sebastián Aguilar Gajardo",
     "descripcion": "Taller de Taekwondo.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/card-taekwondo.jpg"
   },
+  //PANCHOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
   {
     "id": 18,
     "nombre": "Vóleibol Playa",
@@ -291,7 +292,7 @@ export const mockTalleres = [
     "instructor": "Luis Bugueño Lizana",
     "descripcion": "Taller de Vóleibol Playa.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2023/03/Voleibol-Playa.jpeg"
   },
   {
     "id": 19,
@@ -308,7 +309,7 @@ export const mockTalleres = [
     "instructor": "Antonio López Pérez",
     "descripcion": "Taller de Ultimate Frisbee.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/card-ultimate-frisbee.jpg"
   },
   {
     "id": 20,
@@ -324,7 +325,7 @@ export const mockTalleres = [
     "instructor": "Luis Bugueño Lizana",
     "descripcion": "Taller de Vóleibol.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/card-voleiball.jpg"
   },
   {
     "id": 21,
@@ -340,7 +341,7 @@ export const mockTalleres = [
     "instructor": "Jorge Botau Mancilla",
     "descripcion": "Taller de Vóleibol.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/card-voleiball.jpg"
   },
   {
     "id": 22,
@@ -356,7 +357,7 @@ export const mockTalleres = [
     "instructor": "Claudio Barrera",
     "descripcion": "Taller de Tenis.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/card-tenis.jpg"
   },
   {
     "id": 23,
@@ -373,7 +374,7 @@ export const mockTalleres = [
     "instructor": "Gonzalo Riesco Camus, Jorge Botau Mancilla",
     "descripcion": "Taller de Entrenamiento Funcional.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/card-entrenamiento-funcional.jpg"
   },
   {
     "id": 24,
@@ -390,7 +391,7 @@ export const mockTalleres = [
     "instructor": "Gonzalo Riesco Camus, Jorge Botau Mancilla",
     "descripcion": "Taller de GAP (Glúteos, Abdominales y Piernas).",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2023/03/WhatsApp-Image-2020-04-13-at-18.30.07-copia.jpg"
   },
   {
     "id": 25,
@@ -407,7 +408,7 @@ export const mockTalleres = [
     "instructor": "Nicole Monsalve Vargas",
     "descripcion": "Taller de Pilates.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/Pilates.2e16d0ba.fill-158x158-1.jpg"
   },
   {
     "id": 26,
@@ -424,7 +425,7 @@ export const mockTalleres = [
     "instructor": "Gonzalo Riesco Camus",
     "descripcion": "Taller de TRX.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2023/03/Group_Personal_Training_at_a_Gym.jpg"
   },
   {
     "id": 27,
@@ -441,7 +442,7 @@ export const mockTalleres = [
     "instructor": "Karen Cea",
     "descripcion": "Taller de Entrenamiento Funcional.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/card-entrenamiento-funcional.jpg"
   },
   {
     "id": 28,
@@ -457,8 +458,9 @@ export const mockTalleres = [
     "instructor": "Karen Cea",
     "descripcion": "Taller de Entrenamiento Funcional.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2022/05/card-entrenamiento-funcional.jpg"
   },
+  //Voshido
   {
     "id": 29,
     "nombre": "Yoga",
@@ -474,7 +476,7 @@ export const mockTalleres = [
     "instructor": "Nicole Monsalve Vargas",
     "descripcion": "Taller de Yoga.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": "https://defider.usm.cl/wp-content/uploads/2024/03/Yoga.jpeg"
   },
   {
     "id": 30,
@@ -491,7 +493,7 @@ export const mockTalleres = [
     "instructor": "Valeska Ahumada",
     "descripcion": "Taller de Spinning.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": 'https://defider.usm.cl/wp-content/uploads/2022/05/card-spinning.jpg'
   },
   {
     "id": 31,
@@ -507,7 +509,7 @@ export const mockTalleres = [
     "instructor": "Haruko Tsukame Saez",
     "descripcion": "Taller de Salsa.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": 'https://defider.usm.cl/wp-content/uploads/2023/03/Salsa.jpg'
   },
   {
     "id": 32,
@@ -523,7 +525,7 @@ export const mockTalleres = [
     "instructor": "Haruko Tsukame Saez",
     "descripcion": "Taller de Salsa.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": 'https://defider.usm.cl/wp-content/uploads/2023/03/Salsa.jpg'
   },
   {
     "id": 33,
@@ -539,7 +541,7 @@ export const mockTalleres = [
     "instructor": "Eveleen Rojas Salgado",
     "descripcion": "Taller de Danza Contemporánea.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": 'https://defider.usm.cl/wp-content/uploads/2024/03/Danza-Contemporanea-cuatro.jpg'
   },
   {
     "id": 34,
@@ -556,7 +558,7 @@ export const mockTalleres = [
     "instructor": "Haruko Tsukame Saez",
     "descripcion": "Taller de Danza.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": 'https://defider.usm.cl/wp-content/uploads/2022/05/card-danza.jpg'
   },
   {
     "id": 35,
@@ -572,7 +574,7 @@ export const mockTalleres = [
     "instructor": "Haruko Tsukame Saez",
     "descripcion": "Taller de Danza.",
     "nivel": "Todos losagros",
-    "imagen": null
+    "imagen": 'https://defider.usm.cl/wp-content/uploads/2022/05/card-danza.jpg'
   },
   {
     "id": 36,
@@ -588,7 +590,7 @@ export const mockTalleres = [
     "instructor": "Eveleen Rojas Salgado",
     "descripcion": "Taller de Folclor.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": 'https://defider.usm.cl/wp-content/uploads/2022/12/IMG_9983.jpg'
   },
   {
     "id": 37,
@@ -605,7 +607,7 @@ export const mockTalleres = [
     "instructor": "Haruko Tsukame Saez",
     "descripcion": "Taller de Folclor.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": 'https://defider.usm.cl/wp-content/uploads/2022/12/IMG_9983.jpg'
   },
   {
     "id": 38,
@@ -621,7 +623,7 @@ export const mockTalleres = [
     "instructor": "José Gallardo Hurtado",
     "descripcion": "Taller de Teatro.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": 'https://defider.usm.cl/wp-content/uploads/2023/03/teatro3-889-scaled.jpg'
   },
   {
     "id": 39,
@@ -637,7 +639,7 @@ export const mockTalleres = [
     "instructor": "José Gallardo Hurtado",
     "descripcion": "Taller de Teatro.",
     "nivel": "Todos los niveles",
-    "imagen": null
+    "imagen": 'https://defider.usm.cl/wp-content/uploads/2023/03/teatro3-889-scaled.jpg'
   }
 ];
 

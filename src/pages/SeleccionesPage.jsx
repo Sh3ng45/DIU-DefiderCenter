@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Trophy, Clock, MapPin, Users, Star, Calendar, FileText, Send } from 'lucide-react';
 import '../styles/SeleccionesPage.css';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { mockSelecciones } from '../data/mockData';
 
@@ -33,11 +35,11 @@ const SeleccionesPage = () => {
     
     // Validación básica
     if (!formData.nombre || !formData.email || !formData.telefono) {
-      alert('Por favor completa todos los campos obligatorios');
+      toast.error('Por favor completa todos los campos obligatorios');
       return;
     }
 
-    alert(`¡Postulación enviada exitosamente para ${selectedSeleccion.nombre}! Te contactaremos pronto.`);
+    toast.success(`¡Postulación enviada exitosamente para ${selectedSeleccion.nombre}! Te contactaremos pronto.`);
     
 
     setFormData({
@@ -55,6 +57,7 @@ const SeleccionesPage = () => {
 
   return (
     <div className="selecciones-page">
+      <ToastContainer />
       <div className="container">
         {/* Header de la página */}
         <div className="page-header">

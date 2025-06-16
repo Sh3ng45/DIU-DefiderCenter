@@ -3,6 +3,8 @@ import { Calendar, Clock, MapPin, Users, CheckCircle, X } from 'lucide-react';
 import { DateSelector, SpaceSelector } from '../components/gimnasio';
 import { espaciosGimnasio, horariosDisponibles, generateMockReservas } from '../data/mockData';
 import '../styles/GimnasioPage.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const GimnasioPage = () => {
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
@@ -21,9 +23,7 @@ const GimnasioPage = () => {
     while (daysAdded < 6) {
       const date = new Date(today);
       date.setDate(today.getDate() + i);
-      
-      // 0 es Domingo, 1 es Lunes, ..., 6 es Sábado
-      // Solo agregar si no es Domingo (getDay() !== 0)
+
       if (date.getDay() !== 0) {
         days.push({
           date: date.toISOString().split('T')[0],
@@ -32,30 +32,27 @@ const GimnasioPage = () => {
             day: 'numeric',
             month: 'short'
           }),
-          isToday: date.toDateString() === today.toDateString() && i === 0 // Ajustar isToday para la fecha actual real
+          isToday: date.toDateString() === today.toDateString() && i === 0 
         });
         daysAdded++;
       }
       i++;
     }
     
-    // Asegurar que 'isToday' se marque correctamente si el primer día hábil es hoy
+
     if (days.length > 0) {
-        const firstDayDate = new Date(days[0].date + 'T00:00:00'); // Asegurar que se compara solo la fecha
+        const firstDayDate = new Date(days[0].date + 'T00:00:00'); 
         const todayDateOnly = new Date(today.getFullYear(), today.getMonth(), today.getDate());
         if (firstDayDate.getTime() === todayDateOnly.getTime()) {
             days[0].isToday = true;
         } else {
-            // Si el primer día no es hoy, ningún día es 'isToday' en este contexto de "próximos 7 días hábiles"
-            // o podrías buscar si 'today' está en la lista y marcarlo.
-            // Por simplicidad, si el primer día hábil no es hoy, no marcamos ninguno como 'isToday'.
-            // Opcionalmente, puedes iterar 'days' para encontrar si 'today' (si es hábil) está en la lista.
+
             days.forEach(day => {
                 const currentDate = new Date(day.date + 'T00:00:00');
                 if (currentDate.getTime() === todayDateOnly.getTime() && today.getDay() !== 0) {
                     day.isToday = true;
                 } else {
-                    day.isToday = false; // Asegurar que otros no se marquen incorrectamente
+                    day.isToday = false; 
                 }
             });
         }
@@ -65,10 +62,9 @@ const GimnasioPage = () => {
     return days;
   };
 
-  // Función para manejar la reserva
   const handleReserva = () => {
     if (!selectedHorario) {
-      alert('Por favor selecciona un horario');
+      toast.warn('Por favor selecciona un horario');
       return;
     }
 
@@ -84,13 +80,12 @@ const GimnasioPage = () => {
       });
       setShowConfirmation(true);
     } else {
-      alert('No hay cupos disponibles para este horario');
+      toast.error('No hay cupos disponibles para este horario');
     }
   };
 
   // Confirmar reserva
   const confirmarReserva = () => {
-    // Actualizar el estado local
     setReservas(prev => {
       const newReservas = { ...prev };
       const horarioData = newReservas[selectedDate][selectedEspacio][selectedHorario];
@@ -106,13 +101,14 @@ const GimnasioPage = () => {
 
     setShowConfirmation(false);
     setSelectedHorario('');
-    alert('¡Reserva confirmada exitosamente!');
+    toast.success('¡Reserva confirmada exitosamente!');
   };
 
   const weekDays = getNextWeekDays();
 
   return (
     <div className="gimnasio-page">
+      <ToastContainer />
       <div className="container">
         {/* Header de la página */}
         <div className="page-header">

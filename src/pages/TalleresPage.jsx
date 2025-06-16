@@ -3,8 +3,8 @@ import { Search } from 'lucide-react';
 import { SearchControls, FilterPanel, TallerCard, TallerDetail } from '../components/talleres';
 import { mockTalleres, deporteOptions, diaOptions, ubicacionOptions, bloqueOptions } from '../data/mockData';
 import '../styles/TalleresPage.css';
-
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const TalleresPage = () => {
   const [talleres, setTalleres] = useState(mockTalleres);
@@ -58,13 +58,13 @@ const TalleresPage = () => {
     
     const taller = talleres.find(t => t.id === tallerId);
     if (taller && taller.ocupados < taller.cupos) {
-      alert(`¡Te has inscrito exitosamente al taller "${taller.nombre}"!`);
+      toast.success(`¡Te has inscrito exitosamente al taller "${taller.nombre}"!`);
       // Actualizar el estado local
       setTalleres(prev => prev.map(t => 
         t.id === tallerId ? { ...t, ocupados: t.ocupados + 1 } : t
       ));
     } else {
-      alert('No hay cupos disponibles para este taller.');
+      toast.error('No hay cupos disponibles para este taller.');
     }
   };
 
@@ -86,6 +86,7 @@ const TalleresPage = () => {
 
   return (
     <div className="talleres-page">
+      <ToastContainer />
       <div className="container">
         {/* Header de la página */}
         <div className="page-header">
