@@ -12,15 +12,16 @@ const Header = () => {
   return (
     <header className="app-header">
       <div className="header-container">
-        {/* Logo que enlaza a Home*/}
-        <Link to="/" className="logo-link">
-          <div className="logo">
-            <Trophy className="logo-icon" />
-            <span className="logo-text">USM Defider</span>
-          </div>
-        </Link>
+          <Link to="/" className="logo-link" aria-label="Página de inicio de USM Defider">
+            <img 
+              src="https://defider.usm.cl/wp-content/uploads/2021/11/defider.svg" 
+              alt="Logo USM Defider" 
+              className="logo-image" 
+              style={{ height: '50px' }}
+            />
+          </Link>
 
-        {/* Navegación principal */}
+
         <nav className="main-nav" role="navigation" aria-label="Navegación principal">
           <ul className="nav-list">
             <li>
